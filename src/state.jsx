@@ -1,27 +1,22 @@
 import React from 'react'
- export default function State(){
-    const [count,setCount]=React.useState(0)
-     function add(){
-        setCount(count+1)
-     }
-     function subtract(){
-        setCount(count-1)
-     }
-     return(
-         <main className="container">
-             <h1>
-                 Counting Clicks
-             </h1>
-             <div className="counter">
-                 <button className="minus" onClick={subtract} aria-label="decrease count">
-                     -
-                 </button>
-                 <h2 className="count">{count}</h2>
-                 <button className="plus" onClick={add} aria-label="increase count">
-                     +
-                 </button>
-             </div>
-         </main>
-         )
- }
+export default function State() {
+    const [myFavouriteThings,setMyFavouriteThings]=React.useState([])
+
+    const allFavouriteThings=["🍕","🍔","🍟","🍿","🥗","🥯","🍗","🧂"]
+    const thingsElements=myFavouriteThings.map(thing=> <p key={thing}>{thing}</p>)
+    function addFavouriteThings(){
+        setMyFavouriteThings(
+            prevFavThings=>[
+            ...prevFavThings,
+            allFavouriteThings[prevFavThings.length]
+            ]
+        )
+    }
+    return (
+        <main className="main-content">
+            <button className="button" onClick={addFavouriteThings}>Add item</button>
+            <section aria-live="polite">{thingsElements}</section>
+        </main>
+    )
+}
 
