@@ -30,7 +30,26 @@ export default function App(){
                 <label htmlFor="password">Password:</label>
                 <input id="password" type="password" name="password"/>
                 <br/>
+                <label htmlFor="description">Description:</label>
+                <textarea id="description" name="description"
+                          defaultValue="This is a description">
 
+                </textarea>
+                <fieldset>
+                    <legend><label>Employment Status</label></legend>
+                    <label>
+                        <input type="radio" name="employmentStatus"value="enemployed"/>
+                        Unemployed
+                    </label>
+                    <label>
+                        <input type="radio" name="employmentStatus"value="part-time"/>
+                        part-time
+                    </label>
+                    <label>
+                        <input type="radio" name="employmentStatus"value="full-time"/>
+                        full-time
+                    </label>
+                </fieldset>
                 <button>Submit</button>
             </form>
         </section>

@@ -57,3 +57,18 @@ button {
 button:hover {
     background-color: #ddd;
 }
+
+textarea{
+    margin-bottom:20px;
+}
+
+input[type="checkbox"],input[type="radio"] {
+    margin-right:10px;
+}
+
+fieldset{
+    border:1px solid #262626;
+    margin-bottom:20px;
+    display: flex;
+    flex-direction: column;
+}
